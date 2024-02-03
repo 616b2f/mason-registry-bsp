@@ -1,0 +1,19 @@
+---
+name: dotnet-bsp
+description: Build Server for .NET C#
+homepage: https://github.com/616b2f/dotnet-bsp
+licenses:
+  - MIT
+languages:
+  - C#
+categories: []
+
+source:
+  id: pkg:github/616b2f/dotnet-bsp@v0.0.1
+  build:
+    run: |
+      dotnet build
+      dotnet publish
+
+bin:
+  dotnet-bsp: dotnet:bin/dotnet-bsp.dll

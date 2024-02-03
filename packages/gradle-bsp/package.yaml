@@ -1,0 +1,23 @@
+---
+name: gradle-bsp
+description: Build Server for Gradle
+homepage: https://github.com/microsoft/build-server-for-gradle
+licenses:
+  - MIT
+languages:
+  - Java
+categories: []
+
+source:
+  id: pkg:github.com/microsoft/build-server-for-gradle@v0.1.2
+  build:
+    run: |
+      ./gradlew clean build
+
+share:
+  server/build/libs/server.jar: server.jar
+  server/build/libs/plugins/: plugins/
+  server/build/libs/runtime/: runtime/
+
+bin:
+  gradle-bsp: java-jar:server.jar
