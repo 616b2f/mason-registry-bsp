@@ -9,7 +9,8 @@ languages:
 categories: []
 
 source:
-  id: pkg:github/616b2f/dotnet-bsp@v0.0.1
+  # renovate:datasource=git-refs
+  id: pkg:github/616b2f/dotnet-bsp@d310b04bcdad72574e50b64f95f5cdfea51ebba0
   build:
     run: |
       dotnet build

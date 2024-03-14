@@ -10,10 +10,17 @@ categories: []
 
 source:
   # renovate:datasource=git-refs
-  id: pkg:github.com/cargo-bsp/cargo-bsp@d7fa0a0e6db12bdc31daf0be7dd6280e9ecc3442
+  id: pkg:github/cargo-bsp/cargo-bsp@d7fa0a0e6db12bdc31daf0be7dd6280e9ecc3442
   build:
-    run: |
-      cargo build
+    - target: unix
+      run: |
+        cargo build --release
+      bin: target/release/server
+    - target: win
+      run: |
+        Set-Location -Path .\mm0-rs
+        cargo build --release
+      bin: target/release/server.exe
 
 bin:
-  cargo-bsp: target/release/server
+  cargo-bsp: "{{source.build.bin}}"

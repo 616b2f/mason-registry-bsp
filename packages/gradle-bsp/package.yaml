@@ -9,15 +9,14 @@ languages:
 categories: []
 
 source:
-  id: pkg:github.com/microsoft/build-server-for-gradle@v0.1.2
+  id: pkg:github/microsoft/build-server-for-gradle@0.1.2
   build:
-    run: |
-      ./gradlew clean build
-
-share:
-  server/build/libs/server.jar: server.jar
-  server/build/libs/plugins/: plugins/
-  server/build/libs/runtime/: runtime/
+    run: ./gradlew --no-daemon build
 
 bin:
-  gradle-bsp: java-jar:server.jar
+  gradle-bsp: java-jar:server/build/libs/server.jar
+
+share:
+  gradle-bsp/server.jar: server/build/libs/server.jar
+  gradle-bsp/plugins/: server/build/libs/plugins/
+  gradle-bsp/runtime/: server/build/libs/runtime/
