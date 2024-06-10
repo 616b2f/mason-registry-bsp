@@ -10,7 +10,7 @@ categories: []
 
 source:
   # renovate:datasource=git-refs
-  id: pkg:github/616b2f/dotnet-bsp@277e35ff457cdc236432be138b0cdee74bb7ba45
+  id: pkg:github/616b2f/dotnet-bsp@4ccc238c02edaabb73128ccf3016a6331af6f9d9
   build:
     run: |
       dotnet build
