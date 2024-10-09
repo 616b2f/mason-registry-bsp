@@ -1,0 +1,34 @@
+---
+name: bazel-bsp
+description: An implementation of the Build Server Protocol for Bazel
+homepage: https://github.com/JetBrains/bazel-bsp
+licenses:
+  - Apache-2.0
+languages:
+  - Java
+  - Kotlin
+  - Scala
+  - Python
+  - Thrift
+  - Rust
+categories: []
+
+source:
+  # renovate:datasource=github-tabs
+  id: pkg:github/JetBrains/bazel-bsp@3.2.0
+  build:
+    run: |
+      bazel build //...
+
+bin:
+  bazel-bsp: java-jar:server/build/libs/server.jar
+
+share:
+  bazel-bsp/server.jar: server/build/libs/server.jar
+  bazel-bsp/plugins/: server/build/libs/plugins/
+  bazel-bsp/runtime/: server/build/libs/runtime/
+
+# bazel run --stamp --define "maven_repo=file://$HOME/.m2/repository" //server/src/main/kotlin/org/jetbrains/bsp/bazel:bsp.publish
+# cs launch -r m2Local org.jetbrains.bsp:bazel-bsp:3.2.0 -M org.jetbrains.bsp.bazel.install.Install
+#
+# cs launch org.jetbrains.bsp:bazel-bsp:3.2.0 -M org.jetbrains.bsp.bazel.install.Install
