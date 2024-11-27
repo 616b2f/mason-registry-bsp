@@ -4,10 +4,12 @@
 [![Package tests](https://img.shields.io/badge/CI-Package%20Tests-brightgreen?style=flat-square&logo=github)](https://github.com/mason-org/mason-registry/actions/workflows/package-tests.yaml)
 [![Sponsors](https://img.shields.io/github/sponsors/williamboman?style=flat-square)](https://github.com/sponsors/williamboman)
 
-![mason-registry](https://user-images.githubusercontent.com/6705160/230374582-25c9c26a-7885-4e1e-960d-3ec6880fbcb4.png)
+
+This is a fork of ![mason-registry](https://user-images.githubusercontent.com/6705160/230374582-25c9c26a-7885-4e1e-960d-3ec6880fbcb4.png)
+to provide Build Servers.
 
 <p align="center">
-    Core package registry for <a href="https://github.com/williamboman/mason.nvim"><code>mason.nvim</code></a>.
+    BSP package registry for <a href="https://github.com/williamboman/mason.nvim"><code>mason.nvim</code></a>.
 </p>
 
 Refer to [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
