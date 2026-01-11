@@ -1,7 +1,7 @@
 ---
 name: bazel-bsp
 description: An implementation of the Build Server Protocol for Bazel
-homepage: https://github.com/JetBrains/bazel-bsp
+homepage: https://github.com/VirtusLab/bazel-bsp
 licenses:
   - Apache-2.0
 languages:
@@ -14,7 +14,7 @@ languages:
 categories: []
 
 source:
-  id: pkg:github/JetBrains/bazel-bsp@3.2.0
+  id: pkg:github/VirtusLab/bazel-bsp@4.0.1
   build:
     run: |
       bazel build //...
