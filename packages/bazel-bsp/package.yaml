@@ -14,15 +14,14 @@ languages:
 categories: []
 
 source:
-  id: pkg:github/VirtusLab/bazel-bsp@4.0.1
-  build:
-    run: |
-      bazel build //...
+  # renovate:datasource=github-releases
+  id: pkg:generic/virtuslab/bazel-bsp@v3.4.3
+  download:
+    files:
+      bazel-bsp.jar: https://maven.pkg.github.com/VirtusLab/bazel-bsp/com/virtuslab/bazel-bsp/{{ version | strip_prefix "v" }}/bazel-bsp-{{ version | strip_prefix "v" }}.jar
 
 bin:
-  bazel-bsp: java-jar:server/build/libs/server.jar
+  bazel-bsp: java-jar:bazel-bsp.jar
 
 share:
-  bazel-bsp/server.jar: server/build/libs/server.jar
-  bazel-bsp/plugins/: server/build/libs/plugins/
-  bazel-bsp/runtime/: server/build/libs/runtime/
+  bazel-bsp/bazel-bsp.jar: bazel-bsp.jar
