@@ -1,7 +1,7 @@
 ---
 name: bazel-bsp
 description: An implementation of the Build Server Protocol for Bazel
-homepage: https://github.com/JetBrains/bazel-bsp
+homepage: https://github.com/VirtusLab/bazel-bsp
 licenses:
   - Apache-2.0
 languages:
@@ -14,15 +14,14 @@ languages:
 categories: []
 
 source:
-  id: pkg:github/JetBrains/bazel-bsp@3.2.0
-  build:
-    run: |
-      bazel build //...
+  # renovate:datasource=github-releases
+  id: pkg:generic/virtuslab/bazel-bsp@v4.0.1
+  download:
+    files:
+      bazel-bsp.jar: https://repo1.maven.org/maven2/org/virtuslab/bazel-bsp/{{ version | strip_prefix "v" }}/bazel-bsp-{{ version | strip_prefix "v" }}.jar
 
 bin:
-  bazel-bsp: java-jar:server/build/libs/server.jar
+  bazel-bsp: java-jar:bazel-bsp.jar
 
 share:
-  bazel-bsp/server.jar: server/build/libs/server.jar
-  bazel-bsp/plugins/: server/build/libs/plugins/
-  bazel-bsp/runtime/: server/build/libs/runtime/
+  bazel-bsp/bazel-bsp.jar: bazel-bsp.jar
