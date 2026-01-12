@@ -18,7 +18,7 @@ source:
   id: pkg:generic/virtuslab/bazel-bsp@v3.4.3
   download:
     files:
-      bazel-bsp.jar: https://maven.pkg.github.com/VirtusLab/bazel-bsp/com/virtuslab/bazel-bsp/{{ version | strip_prefix "v" }}/bazel-bsp-{{ version | strip_prefix "v" }}.jar
+      bazel-bsp.jar: https://repo1.maven.org/maven2/org/virtuslab/bazel-bsp/{{ version | strip_prefix "v" }}/bazel-bsp-{{ version | strip_prefix "v" }}.jar
 
 bin:
   bazel-bsp: java-jar:bazel-bsp.jar
