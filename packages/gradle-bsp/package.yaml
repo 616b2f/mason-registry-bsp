@@ -9,7 +9,7 @@ languages:
 categories: []
 
 source:
-  id: pkg:github/microsoft/build-server-for-gradle@0.3.0
+  id: pkg:github/microsoft/build-server-for-gradle@0.4.0
   build:
     run: ./gradlew --no-daemon build
 
